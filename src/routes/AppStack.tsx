@@ -1,17 +1,24 @@
 import React from 'react';
 
-import LoginPage from '../views/LoginPage/index';
+import colors from '../styles/Colors'
 
-import { NavigationContainer } from '@react-navigation/native';
+import LoginPage from '../views/LoginPage/index';
+import IndexPage from '../views/IndexPage/index';
+
+import { View } from 'react-native';
+import { DarkTheme, NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 const { Navigator, Screen } = createStackNavigator();
 
+
 function AppStack() {
+  
   return (
-    <NavigationContainer>
-      <Navigator screenOptions={{headerShown: false, cardStyle: {backgroundColor: '#18171F'}}}>
+    <NavigationContainer theme={DarkTheme}>
+      <Navigator screenOptions={{headerShown: false, animationEnabled: true }}>
         <Screen name="LoginPage" component={LoginPage} />
+        <Screen name="IndexPage" component={IndexPage} />
       </Navigator>
     </NavigationContainer>
   )

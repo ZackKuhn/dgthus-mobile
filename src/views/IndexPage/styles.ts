@@ -1,14 +1,12 @@
 import { StyleSheet } from 'react-native';
 
-import colors from '../../styles/Colors'
-
  const styles = StyleSheet.create({
   
   container: {
     flex: 1,
     flexDirection: "column",
     justifyContent: 'center',
-    backgroundColor: `${colors.darkBg}`,
+    backgroundColor: '#18171F',
     alignItems: 'center',
     padding: 20,
   },
@@ -29,24 +27,20 @@ import colors from '../../styles/Colors'
   //Container que aloca o botão "entrar"
   actionBox:{
     flex: 2,
-    justifyContent: 'center',
-    alignItems: 'center'
   },
 
-  /*Textos que recebem underline e que permitem ações 
-  **tela de login: Esqueceu sua senha?*/
+  //Texto na tela de login: Esqueceu sua senha?
   label:{
     height: 50,
     fontFamily: 'Quicksand_400Regular',
-    color: `${colors.secondaryTextColor}`,
+    color: '#908CA6',
     fontSize: 14,
     lineHeight: 30,
-    textDecorationLine: 'underline',
-    padding: 10
+    textDecorationLine: 'underline'
   },
 
   InputAbove: {
-    backgroundColor: `${colors.inputBg}`,
+    backgroundColor: '#272531',
     minWidth: '80%',
     paddingHorizontal: 24,
     borderTopLeftRadius: 12,
@@ -59,7 +53,7 @@ import colors from '../../styles/Colors'
   },
 
   InputBelow: {
-    backgroundColor: `${colors.inputBg}`,
+    backgroundColor: '#272531',
     minWidth: '80%',
     marginTop: 2,
     paddingHorizontal: 24,
@@ -72,7 +66,7 @@ import colors from '../../styles/Colors'
   },
 
   button: {
-    backgroundColor: `${colors.primaryColor}`,
+    backgroundColor: "#8B5CD0",
     justifyContent: 'center',
     minWidth: '80%',
     height: 60,
@@ -85,7 +79,7 @@ import colors from '../../styles/Colors'
 
   buttonText: {
     fontFamily: 'Quicksand_400Regular',
-    color: `${colors.primaryTextColor}`,
+    color: '#fff',
     fontSize: 14,
     fontWeight: '900'
   }
