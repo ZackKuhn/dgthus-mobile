@@ -4,6 +4,7 @@ import colors from '../styles/Colors'
 
 import LoginPage from '../views/LoginPage/index';
 import IndexPage from '../views/IndexPage/index';
+import ForgotPage from '../views/WarningPages/ForgotPage/index';
 
 import { View } from 'react-native';
 import { DarkTheme, NavigationContainer } from '@react-navigation/native';
@@ -16,9 +17,11 @@ function AppStack() {
   
   return (
     <NavigationContainer theme={DarkTheme}>
-      <Navigator screenOptions={{headerShown: false, animationEnabled: true }}>
+      <Navigator 
+      screenOptions={{headerShown: false, animationEnabled: true }}>
         <Screen name="LoginPage" component={LoginPage} />
         <Screen name="IndexPage" component={IndexPage} />
+        <Screen name="ForgotPage" component={ForgotPage} />
       </Navigator>
     </NavigationContainer>
   )

@@ -14,6 +14,7 @@ import colors from '../../styles/Colors'
   },
   
   logoBox: {
+    zIndex: 99,
     height: 240,
     width: '100%',
     justifyContent: 'center',
@@ -40,44 +41,80 @@ import colors from '../../styles/Colors'
     fontFamily: 'Quicksand_400Regular',
     color: `${colors.secondaryTextColor}`,
     fontSize: 14,
-    lineHeight: 30,
+    fontWeight: '400',
     textDecorationLine: 'underline',
     padding: 10
   },
 
-  InputAbove: {
+  InputContainerAbove: {
     backgroundColor: `${colors.inputBg}`,
-    minWidth: '80%',
-    paddingHorizontal: 24,
+    minWidth: '90%',
+    flexDirection: 'row',
+    alignItems: 'center',
     borderTopLeftRadius: 12,
     borderTopRightRadius: 12,
-    height: 48,
+    height: 60,
+    fontFamily: 'Quicksand_400Regular',
+    color: '#fff',
+    fontSize: 14,
+    lineHeight: 30,
+    paddingLeft: 15,
+    marginBottom: 2
+  },
+
+  InputBoxAbove: {
+    flex: 1,
+    paddingHorizontal: 10,
+    height: 60,
     fontFamily: 'Quicksand_400Regular',
     color: '#fff',
     fontSize: 14,
     lineHeight: 30,
   },
 
-  InputBelow: {
+  InputContainerBelow: {
     backgroundColor: `${colors.inputBg}`,
-    minWidth: '80%',
-    marginTop: 2,
-    paddingHorizontal: 24,
+    minWidth: '90%',
+    flexDirection: 'row',
+    alignItems: 'center',
     borderBottomLeftRadius: 12,
     borderBottomRightRadius: 12,
-    height: 48,
+    height: 60,
     fontFamily: 'Quicksand_400Regular',
     color: '#fff',
     fontSize: 14,
+    lineHeight: 30,
+    paddingLeft: 15
+  },
+
+  InputBoxBelow: {
+    flex: 1,
+    paddingHorizontal: 10,
+    height: 60,
+    fontFamily: 'Quicksand_400Regular',
+    color: '#fff',
+    fontSize: 14,
+    lineHeight: 30,
   },
 
   button: {
     backgroundColor: `${colors.primaryColor}`,
-    justifyContent: 'center',
-    minWidth: '80%',
+    minWidth: '90%',
     height: 60,
     flexDirection: "row",
     borderRadius: 10,
+    overflow: "hidden",
+    alignItems: "center",
+    marginTop: 8,
+    paddingLeft: 25
+  },
+
+  registerButton: {
+    backgroundColor: `${colors.secondaryColor}`,
+    minWidth: '90%',
+    height: 60,
+    borderRadius: 10,
+    justifyContent: 'center',
     overflow: "hidden",
     alignItems: "center",
     marginTop: 8,
@@ -87,7 +124,16 @@ import colors from '../../styles/Colors'
     fontFamily: 'Quicksand_400Regular',
     color: `${colors.primaryTextColor}`,
     fontSize: 14,
-    fontWeight: '900'
+    fontWeight: '900',
+    paddingLeft: 65
+  },
+
+  registerButtonText: {
+    fontFamily: 'Quicksand_400Regular',
+    color: `${colors.secondaryTextColor}`,
+    fontSize: 14,
+    fontWeight: '900',
+    justifyContent: 'center'
   }
 });
 

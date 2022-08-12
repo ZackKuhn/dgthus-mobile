@@ -1,19 +1,26 @@
+import { useNavigation } from "@react-navigation/native";
+import { StackNavigationProp } from '@react-navigation/stack';
+// import Lottie from 'lottie-react-native';
 import React from 'react';
 import { Text, TextInput, View } from 'react-native';
 import { RectButton } from "react-native-gesture-handler";
-import { useNavigation } from "@react-navigation/native";
+import { MaterialIcons, Entypo } from '@expo/vector-icons'; 
 
+//Navigation Page types
+import { RootStackParamList } from '../../types';
+//Cores padrões da aplicação
 import colors from '../../styles/Colors';
-
+//Exporta a logo TURMATUNE
 import SvgComponent from '../../components/Logo';
 
+import CableIcon from '../../components/CableIcon';
 import styles from './styles';
 
 function LoginPage (){
-  const navigation = useNavigation();
+  const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
 
   function handleNavigationToHome() {
-    navigation.navigate("IndexPage");
+    navigation.navigate('IndexPage', {id: 'indx'});
   }
 
   return (
@@ -22,28 +29,41 @@ function LoginPage (){
         <SvgComponent/>
       </View>
       <View style={styles.loginBox}>
-        <TextInput
-        style={styles.InputAbove}
-        placeholderTextColor={colors.phTextColor}
-        selectionColor={colors.sltColor}
-        placeholder="Seu email"
-        />
+        <View style={styles.InputContainerAbove}>
+          <MaterialIcons name="email" size={24} color={colors.darkIconColor} />
+          <TextInput
+          style={styles.InputBoxAbove}
+          placeholderTextColor={colors.phTextColor}
+          selectionColor={colors.sltColor}
+          placeholder="Seu email"
+          />
+        </View>
+        <View style={styles.InputContainerBelow}>
+          <Entypo name="lock-open" size={24} color={colors.darkIconColor} />
         <TextInput 
-        style={styles.InputBelow}
+        secureTextEntry={true}
+          style={styles.InputBoxBelow}
         placeholderTextColor={colors.phTextColor}
         selectionColor={colors.sltColor}
         placeholder="Seu senha"
         />
-        <Text style={styles.label}>Esqueceu sua senha?</Text>
+        </View>
+        <Text onPress={()=> navigation.navigate('ForgotPage', {id: 'frgt'})} style={styles.label}>Esqueceu sua senha?</Text>
       </View>
       <View style={styles.actionBox}>
         <RectButton 
         style={styles.button}
         onPress={handleNavigationToHome}
         >
-              <Text style={styles.buttonText}>Entrar</Text>
+          <CableIcon/>
+          <Text style={styles.buttonText}>Entrar</Text>
           </RectButton>
-          <Text style={styles.label}>Preciso me cadastrar!</Text>
+          <RectButton 
+        style={styles.registerButton}
+        onPress={handleNavigationToHome}
+        >
+          <Text style={styles.registerButtonText}>Cadastrar</Text>
+          </RectButton>
       </View>
     </View>
   )

@@ -1,14 +1,14 @@
 import { StyleSheet } from 'react-native';
 
-import colors from '../../styles/Colors'
-
  const styles = StyleSheet.create({
   
   container: {
     flex: 1,
     flexDirection: "column",
+    justifyContent: 'center',
     backgroundColor: '#18171F',
     alignItems: 'center',
+    padding: 20,
   },
   
   logoBox: {
@@ -18,52 +18,11 @@ import colors from '../../styles/Colors'
     alignItems: 'center',
   },
   
-  header: {
-    flex: .28,
-    width: '100%',
-    flexDirection: 'row',
-    backgroundColor: `${colors.pureDarkBg}`,
+  loginBox: {
+    flex: 2,
     justifyContent: 'flex-start',
     alignItems: 'center',
-  },
-
-  userInfoBox:{
-    width: '60%',
-    height: '100%',
-    justifyContent: 'center',
-    paddingLeft: 30
-  },
-
-  userNameLabel:{
-    fontFamily: 'Quicksand_400Regular',
-    color: `${colors.primaryTextColor}`,
-    fontSize: 16,
-  },
-
-  userAssetLabel:{
-    fontFamily: 'Quicksand_400Regular',
-    color: `${colors.secondaryTextColor}`,
-    fontSize: 14,
-  },
-
-  headerIcons:{
-    flex: 1,
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'flex-end',
-    paddingRight: 30
-  },
-  
-  ScheduleCard: {
-    position: 'absolute',
-    borderRadius: 10,
-    top: 130,
-    width: '88%',
-    height: 100,
-    justifyContent: 'center',
-    alignItems: 'flex-end',
-    backgroundColor: `${colors.secondaryColor}`
-  },
+  },  
 
   //Container que aloca o botão "entrar"
   actionBox:{

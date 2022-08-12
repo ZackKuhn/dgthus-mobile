@@ -1,7 +1,7 @@
 import * as React from "react"
 import Svg, { Path, Defs, LinearGradient, Stop } from "react-native-svg"
 
-function SvgComponent(props: any) {
+function Logo(props: any) {
   return (
     <Svg
       width={137}
@@ -32,4 +32,4 @@ function SvgComponent(props: any) {
   )
 }
 
-export default SvgComponent
+export default Logo
