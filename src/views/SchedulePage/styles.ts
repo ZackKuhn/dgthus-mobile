@@ -39,28 +39,39 @@ import colors from '../../styles/Colors'
   userInfoBox:{
     width: '60%',
     height: '100%',
-    justifyContent: 'center',
-    paddingLeft: 30
+    alignItems: 'center',
+    justifyContent: 'center'
   },
 
   userNameLabel:{
     fontFamily: 'Quicksand_400Regular',
     color: `${colors.primaryTextColor}`,
-    fontSize: 16,
+    fontSize: 18,
+    fontWeight: '700',
+    lineHeight: 20
   },
 
   userAssetLabel:{
     fontFamily: 'Quicksand_400Regular',
     color: `${colors.secondaryTextColor}`,
     fontSize: 14,
+    lineHeight: 16
   },
 
-  headerIcons:{
+  rightHeaderIcon:{
     flex: 1,
     height: '100%',
     justifyContent: 'center',
     alignItems: 'flex-end',
     paddingRight: 30
+  },
+
+  leftHeaderIcon:{
+    flex: 1,
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    paddingLeft: 30
   },
   
   //Container que aloca o botão "entrar"
@@ -145,8 +156,8 @@ import colors from '../../styles/Colors'
   },
 
   scheduleHour: {
-    flex: 1,
-    justifyContent: 'center',
+    flex: 1.3,
+    justifyContent: 'flex-start',
     alignItems: 'center',
     flexDirection: 'row',
   },

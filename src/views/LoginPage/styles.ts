@@ -84,7 +84,7 @@ import colors from '../../styles/Colors'
     color: '#fff',
     fontSize: 14,
     lineHeight: 30,
-    paddingLeft: 15
+    paddingHorizontal: 15
   },
 
   InputBoxBelow: {

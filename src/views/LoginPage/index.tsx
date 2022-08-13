@@ -1,10 +1,11 @@
+import { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from '@react-navigation/stack';
 // import Lottie from 'lottie-react-native';
 import React from 'react';
 import { Text, TextInput, View } from 'react-native';
-import { RectButton } from "react-native-gesture-handler";
-import { MaterialIcons, Entypo } from '@expo/vector-icons'; 
+import { BorderlessButton, RectButton } from "react-native-gesture-handler";
+import { MaterialIcons, Entypo, Feather } from '@expo/vector-icons'; 
 
 //Navigation Page types
 import { RootStackParamList } from '../../types';
@@ -18,6 +19,8 @@ import styles from './styles';
 
 function LoginPage (){
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
+
+  const [eyeIcon, setEyeIcon] = useState(false);
 
   function handleNavigationToHome() {
     navigation.navigate('IndexPage', {id: 'indx'});
@@ -40,13 +43,20 @@ function LoginPage (){
         </View>
         <View style={styles.InputContainerBelow}>
           <Entypo name="lock-open" size={24} color={colors.darkIconColor} />
-        <TextInput 
-        secureTextEntry={true}
+          <TextInput 
+          secureTextEntry={eyeIcon}
           style={styles.InputBoxBelow}
-        placeholderTextColor={colors.phTextColor}
-        selectionColor={colors.sltColor}
-        placeholder="Seu senha"
-        />
+          placeholderTextColor={colors.phTextColor}
+          selectionColor={colors.sltColor}
+          placeholder="Seu senha"
+          />
+          <BorderlessButton onPress={() => {setEyeIcon(!eyeIcon)}}>
+            {
+              eyeIcon ? 
+              <Feather name="eye" size={24} color={colors.darkIconColor} /> :
+              <Feather name="eye-off" size={24} color={colors.darkIconColor} />
+            }
+          </BorderlessButton>
         </View>
         <Text onPress={()=> navigation.navigate('ForgotPage', {id: 'frgt'})} style={styles.label}>Esqueceu sua senha?</Text>
       </View>

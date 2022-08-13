@@ -4,4 +4,5 @@ export type RootStackParamList = {
   IndexPage: { id: string };
   LoginPage: { id: string };
   ForgotPage: { id: string };
+  SchedulePage: { id: string};
 }
