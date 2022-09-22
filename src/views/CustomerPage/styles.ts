@@ -16,12 +16,22 @@ import colors from '../../styles/Colors'
     flex: .7,
     marginTop: 100,
     paddingHorizontal: 24,
-    justifyContent: 'space-around'
+  },
+
+  CustomerRow:{
+    width: '100%',
+    flex: .15,  
+    paddingHorizontal: 24,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    borderBottomColor: '#272531',
+    borderBottomWidth: StyleSheet.hairlineWidth
   },
   
   logoBox: {
     height: 240,
-    width: '100%',
+    width: '100%',  
     justifyContent: 'flex-end',
     paddingBottom: 40,
     alignItems: 'center',
@@ -172,6 +182,13 @@ import colors from '../../styles/Colors'
   scheduleText: {
     fontFamily: 'Quicksand_400Regular',
     color: `${colors.secondaryTextColor}`,
+    fontSize: 14,
+    padding: 6
+  },
+
+  scheduleInfo: {
+    fontFamily: 'Quicksand_400Regular',
+    color: `${colors.primaryTextColor}`,
     fontSize: 14,
     padding: 6
   },

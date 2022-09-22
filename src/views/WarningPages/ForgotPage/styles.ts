@@ -55,7 +55,7 @@ import { StyleSheet } from 'react-native';
   },
 
   button: {
-    backgroundColor: "#8B5CD0",
+    backgroundColor: "#7453F8",
     justifyContent: 'center',
     minWidth: '90%',
     height: 60,

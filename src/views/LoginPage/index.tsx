@@ -52,8 +52,8 @@ function LoginPage (){
           />
           <BorderlessButton onPress={() => {setEyeIcon(!eyeIcon)}}>
             {
-              eyeIcon ? 
-              <Feather name="eye" size={24} color={colors.darkIconColor} /> :
+              eyeIcon ?
+              <Feather name="eye" size={24} color={colors.primaryColor} /> :
               <Feather name="eye-off" size={24} color={colors.darkIconColor} />
             }
           </BorderlessButton>

@@ -21,7 +21,7 @@ function IndexPage(){
       <View style={styles.header}>
         <View style={styles.userInfoBox}>
           <Text style={styles.userNameLabel}>Ezequias Kuhn</Text>
-          <Text style={styles.userAssetLabel}>teclado</Text>
+          <Text style={styles.userAssetLabel}>C-level</Text>
         </View>
         <View style={styles.headerIcons}>
         <Feather name="settings" size={28} color={colors.primaryColor} />
@@ -42,15 +42,15 @@ function IndexPage(){
         </RectButton>
         <View style={styles.OptionsContainer}>
           <RectButton 
-          onPress={()=> navigation.navigate('SchedulePage', {id: 'schd'})}
+          onPress={()=> navigation.navigate('CustomersPage', {id: 'ctpage'})}
           style={styles.scheduleButton}>
-                <Text style={styles.scheduleButtonText}>Escala</Text>
+                <Text style={styles.scheduleButtonText}>Clientes</Text>
           </RectButton>
           <RectButton style={styles.buttonOption}>
-                <Text style={styles.buttonText}>Integrantes</Text>
+                <Text style={styles.buttonText}>Tasks</Text>
           </RectButton>
           <RectButton style={styles.buttonOption}>
-                <Text style={styles.buttonText}>Músicas</Text>
+                <Text style={styles.buttonText}>tools</Text>
           </RectButton>
         </View>
       <View style={styles.logoBox}>

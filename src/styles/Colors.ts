@@ -1,6 +1,6 @@
 export default {
   //Main Colors
-  primaryColor: "#8B5CD0",
+  primaryColor: "#7453F8",
   secondaryColor: "#23222E",
   //Background Colors
   darkBg: "#18171F",

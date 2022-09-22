@@ -16,12 +16,22 @@ import colors from '../../styles/Colors'
     flex: .7,
     marginTop: 100,
     paddingHorizontal: 24,
-    justifyContent: 'space-around'
+  },
+
+  CustomerRow:{
+    width: '100%',
+    flex: .15,  
+    paddingHorizontal: 24,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    borderBottomColor: '#272531',
+    borderBottomWidth: StyleSheet.hairlineWidth
   },
   
   logoBox: {
     height: 240,
-    width: '100%',
+    width: '100%',  
     justifyContent: 'flex-end',
     paddingBottom: 40,
     alignItems: 'center',
@@ -39,28 +49,39 @@ import colors from '../../styles/Colors'
   userInfoBox:{
     width: '60%',
     height: '100%',
-    justifyContent: 'center',
-    paddingLeft: 30,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
 
   userNameLabel:{
     fontFamily: 'Quicksand_400Regular',
     color: `${colors.primaryTextColor}`,
-    fontSize: 16,
+    fontSize: 18,
+    fontWeight: '700',
+    lineHeight: 20
   },
 
   userAssetLabel:{
     fontFamily: 'Quicksand_400Regular',
     color: `${colors.secondaryTextColor}`,
     fontSize: 14,
+    lineHeight: 16
   },
 
-  headerIcons:{
+  rightHeaderIcon:{
     flex: 1,
     height: '100%',
     justifyContent: 'center',
     alignItems: 'flex-end',
     paddingRight: 30
+  },
+
+  leftHeaderIcon:{
+    flex: 1,
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    paddingLeft: 30
   },
   
   //Container que aloca o botão "entrar"
@@ -145,8 +166,8 @@ import colors from '../../styles/Colors'
   },
 
   scheduleHour: {
-    flex: 1,
-    justifyContent: 'center',
+    flex: 1.3,
+    justifyContent: 'flex-start',
     alignItems: 'center',
     flexDirection: 'row',
   },
@@ -161,6 +182,13 @@ import colors from '../../styles/Colors'
   scheduleText: {
     fontFamily: 'Quicksand_400Regular',
     color: `${colors.secondaryTextColor}`,
+    fontSize: 14,
+    padding: 6
+  },
+
+  scheduleInfo: {
+    fontFamily: 'Quicksand_400Regular',
+    color: `${colors.primaryTextColor}`,
     fontSize: 14,
     padding: 6
   },
